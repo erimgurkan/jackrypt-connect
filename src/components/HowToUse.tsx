@@ -61,44 +61,14 @@ const HowToUse = () => {
             </div>
           </div>
 
-          {/* Right Side - Calendar */}
+          {/* Right Side - Planet Image */}
           <div className="space-y-6">
             <div className="futuristic-card p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <Calendar className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold">Calendar</h3>
-              </div>
-              <p className="text-muted-foreground mb-6">
-                Keep track of your networking activities with our
-                calendar view.
-              </p>
-
-              {/* Mini Calendar */}
-              <div className="bg-input/50 rounded-lg p-4">
-                <div className="flex justify-between items-center mb-4">
-                  <h4 className="font-medium">August 2025</h4>
-                  <div className="flex gap-2">
-                    <button className="text-xs px-2 py-1 rounded hover:bg-muted/20">←</button>
-                    <button className="text-xs px-2 py-1 rounded hover:bg-muted/20">→</button>
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-7 gap-1 text-xs text-center">
-                  {['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map(day => (
-                    <div key={day} className="p-2 text-muted-foreground">{day}</div>
-                  ))}
-                  {Array.from({ length: 31 }, (_, i) => (
-                    <div 
-                      key={i + 1} 
-                      className={`p-2 hover:bg-primary/20 rounded cursor-pointer ${
-                        i + 1 === 15 ? 'bg-primary text-primary-foreground' : ''
-                      }`}
-                    >
-                      {i + 1}
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/9336bbf2-9da6-486b-b257-0f7513aa8985.png" 
+                alt="Green Planet - Environmental Technology Initiative"
+                className="w-full h-auto rounded-lg"
+              />
             </div>
           </div>
         </div>

@@ -6,14 +6,9 @@ const Hero = () => {
   return (
     <section className="hero-bg min-h-screen flex flex-col">
       {/* Navigation */}
-      <nav className="flex justify-between items-center p-6 lg:px-12">
+      <nav className="flex justify-center items-center p-6 lg:px-12">
         <div className="text-2xl font-bold text-foreground">
           Jackrypt
-        </div>
-        <div className="flex gap-4">
-          <Button variant="ghost" asChild className="text-foreground hover:text-primary">
-            <Link to="/login">Sign In</Link>
-          </Button>
         </div>
       </nav>
 
@@ -35,8 +30,7 @@ const Hero = () => {
 
         {/* Description */}
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-          Effortlessly streamline your business connections with Jackrypt.
-          Network, collaborate, and scale your relationships—all in one place.
+          Unlock the power of AI networking with Jackrypt. From streamlining connections to optimizing collaboration, we help entrepreneurs scale effortlessly.
         </p>
 
         {/* Get Started Button in Panel */}
@@ -54,30 +48,65 @@ const Hero = () => {
           </Button>
         </div>
 
-        {/* Dashboard Preview */}
-        <div className="mt-16 w-full max-w-5xl">
+        {/* Interactive Startup Mockup */}
+        <div className="mt-16 w-full max-w-4xl">
           <div className="futuristic-card p-8 bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-sm">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Metric Cards */}
-              <div className="space-y-2">
-                <div className="text-sm text-muted-foreground">Total connections</div>
-                <div className="text-3xl font-bold text-foreground">159</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-sm text-muted-foreground">Total collaborations</div>
-                <div className="text-3xl font-bold text-foreground">12,594</div>
-                <div className="text-xs text-muted-foreground">
-                  This is how much the connections have been
-                  utilized throughout the year
+            {/* Window Header */}
+            <div className="flex items-center justify-between mb-6 pb-4 border-b border-border/20">
+              <div className="flex items-center gap-3">
+                <div className="flex gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
+                <span className="text-sm font-medium text-muted-foreground">Make a Startup</span>
               </div>
-              <div className="space-y-2">
-                <div className="text-sm text-muted-foreground">Active users</div>
-                <div className="text-3xl font-bold text-foreground">789</div>
-                <div className="text-xs text-muted-foreground">Your target</div>
-                <div className="text-xs text-muted-foreground">
-                  Total benchmark of your target how much the users
-                  have been used your connections
+            </div>
+            
+            {/* Startup Creation Interface */}
+            <div className="space-y-6">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-foreground mb-2">Create Your Startup</h3>
+                <p className="text-muted-foreground">Build your vision and connect with co-founders</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Create Side */}
+                <div className="space-y-4 p-4 rounded-lg border border-border/20 bg-card/20">
+                  <h4 className="font-semibold text-foreground">Start Your Journey</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-primary"></div>
+                      <span>Define your startup idea</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-primary/60"></div>
+                      <span>Set required skills</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-primary/30"></div>
+                      <span>Publish to network</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Join Side */}
+                <div className="space-y-4 p-4 rounded-lg border border-border/20 bg-card/20">
+                  <h4 className="font-semibold text-foreground">Find Opportunities</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between p-2 rounded bg-background/50">
+                      <span className="text-sm">AI SaaS Platform</span>
+                      <Button size="sm" variant="outline" className="h-6 text-xs">Apply</Button>
+                    </div>
+                    <div className="flex items-center justify-between p-2 rounded bg-background/50">
+                      <span className="text-sm">GreenTech Startup</span>
+                      <Button size="sm" variant="outline" className="h-6 text-xs">Apply</Button>
+                    </div>
+                    <div className="flex items-center justify-between p-2 rounded bg-background/50">
+                      <span className="text-sm">Fintech Revolution</span>
+                      <Button size="sm" variant="outline" className="h-6 text-xs">Apply</Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
