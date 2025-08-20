@@ -182,6 +182,60 @@
     background-position: 0 0;
     position: relative;
     min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Energy flow effect on grid lines */
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(90deg, transparent 0%, hsl(var(--neon-blue) / 0.6) 50%, transparent 100%),
+      linear-gradient(0deg, transparent 0%, hsl(var(--neon-purple) / 0.6) 50%, transparent 100%);
+    background-size: 200px 50px, 50px 200px;
+    background-position: -200px 0, 0 -200px;
+    animation: energy-flow-horizontal 3s linear infinite, energy-flow-vertical 4s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(90deg, transparent 0%, hsl(var(--neon-cyan) / 0.4) 50%, transparent 100%),
+      linear-gradient(0deg, transparent 0%, hsl(var(--neon-blue) / 0.4) 50%, transparent 100%);
+    background-size: 150px 50px, 50px 150px;
+    background-position: -150px 0, 0 -150px;
+    animation: energy-flow-horizontal 2.5s linear infinite reverse, energy-flow-vertical 3.5s linear infinite reverse;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @keyframes energy-flow-horizontal {
+    0% {
+      background-position: -200px 0, 0 -200px;
+    }
+    100% {
+      background-position: calc(100vw + 200px) 0, 0 -200px;
+    }
+  }
+
+  @keyframes energy-flow-vertical {
+    0% {
+      background-position: -200px 0, 0 -200px;
+    }
+    100% {
+      background-position: -200px 0, 0 calc(100vh + 200px);
+    }
   }
 
   /* Page transitions and smooth effects */
@@ -224,6 +278,25 @@
     background-size: 50px 50px;
     background-position: 0 0;
     position: relative;
+    overflow: hidden;
+  }
+
+  /* Energy flow effect for contact section */
+  .contact-section-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(90deg, transparent 0%, hsl(var(--neon-purple) / 0.5) 50%, transparent 100%),
+      linear-gradient(0deg, transparent 0%, hsl(var(--neon-cyan) / 0.5) 50%, transparent 100%);
+    background-size: 180px 50px, 50px 180px;
+    background-position: -180px 0, 0 -180px;
+    animation: energy-flow-horizontal 3.5s linear infinite, energy-flow-vertical 4.5s linear infinite;
+    pointer-events: none;
+    z-index: 1;
   }
 
   /* Footer grid alignment fix */
@@ -233,6 +306,25 @@
       linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle energy flow for footer */
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(90deg, transparent 0%, hsl(var(--neon-blue) / 0.3) 50%, transparent 100%);
+    background-size: 120px 50px;
+    background-position: -120px 0;
+    animation: energy-flow-horizontal 5s linear infinite;
+    pointer-events: none;
+    z-index: 1;
   }
 
 }
