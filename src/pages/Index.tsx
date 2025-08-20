@@ -9,7 +9,7 @@ import Contact from "@/components/Contact";
 const Index = () => {
   return (
     <div className="min-h-screen hero-bg text-foreground page-transition">
-      <Marquee text="Network - Connect - Scale" />
+      <Marquee text="JACKRYPT" />
       <div className="section-transition">
         <Hero />
       </div>

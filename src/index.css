@@ -215,14 +215,25 @@
     }
   }
 
-  /* Contact section with animated black grid and data flow effect */
+  /* Contact section with animated black grid and data flow effect - fixed alignment */
   .contact-section-bg {
     background: hsl(var(--background));
     background-image: 
       linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
+    background-position: 0 0, 0 0;
     position: relative;
+    animation: grid-move 20s linear infinite;
+  }
+
+  /* Footer grid alignment fix */
+  footer {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 0 0;
     animation: grid-move 20s linear infinite;
   }
 
