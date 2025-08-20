@@ -172,14 +172,16 @@
     transform: translateY(-2px);
   }
 
-  /* Hero background with single horizontal grid pattern extending to full page */
+  /* Hero background with both horizontal and vertical grid pattern extending to full page */
   .hero-bg {
     background: hsl(var(--background));
     background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 100% 50px;
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 0 0;
     position: relative;
-    animation: grid-move-horizontal 20s linear infinite;
+    animation: grid-move 20s linear infinite;
     min-height: 100vh;
   }
 
@@ -214,28 +216,30 @@
     }
   }
 
-  /* Contact section with single horizontal grid - fixed alignment */
+  /* Contact section with both horizontal and vertical grid - fixed alignment */
   .contact-section-bg {
     background: hsl(var(--background));
     background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 100% 50px;
-    background-position: 0 0;
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 0 0;
     position: relative;
-    animation: grid-move-horizontal 20s linear infinite;
+    animation: grid-move 20s linear infinite;
   }
 
   /* Footer grid alignment fix */
   footer {
     background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 100% 50px;
-    background-position: 0 0;
-    animation: grid-move-horizontal 20s linear infinite;
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 0 0;
+    animation: grid-move 20s linear infinite;
   }
 
-  @keyframes grid-move-horizontal {
-    0% { background-position: 0 0; }
-    100% { background-position: 0 50px; }
+  @keyframes grid-move {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 50px 50px, 50px 50px; }
   }
 }
