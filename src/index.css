@@ -172,7 +172,7 @@
     transform: translateY(-2px);
   }
 
-  /* Hero background with animated white grid pattern */
+  /* Hero background with animated white grid pattern extending to full page */
   .hero-bg {
     background: hsl(var(--background));
     background-image: 
@@ -181,6 +181,38 @@
     background-size: 50px 50px;
     position: relative;
     animation: grid-move 20s linear infinite;
+    min-height: 100vh;
+  }
+
+  /* Page transitions and smooth effects */
+  .page-transition {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  .section-transition {
+    animation: slide-up 0.6s ease-out;
+  }
+
+  @keyframes fade-in {
+    0% { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    0% { 
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% { 
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes grid-move {

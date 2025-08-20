@@ -32,7 +32,7 @@ const About = () => {
         {/* Main Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            Jackrypt – Network. Connect. Scale.
+            Network - Connect - Scale
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Unlock the power of AI networking with Jackrypt. From

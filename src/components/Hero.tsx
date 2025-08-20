@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Navigation */}
       <nav className="flex justify-center items-center p-6 lg:px-12">
         <div className="text-2xl font-bold text-foreground">
-          Jackrypt
+          JACKRYPT
         </div>
       </nav>
 

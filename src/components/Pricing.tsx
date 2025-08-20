@@ -65,73 +65,58 @@ const Pricing = () => {
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Choose a plan that works
+            Join Jackrypt Today
             <br />
-            for you
+            Completely Free
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get started with Jackrypt today and enjoy more features with
-            our pro plans.
+            Access all of Jackrypt's powerful AI networking features at no cost.
+            Connect, collaborate, and scale your business effortlessly.
           </p>
 
-          {/* Billing Toggle */}
-          <div className="inline-flex items-center gap-4 p-1 bg-input/50 rounded-lg">
-            <button className="px-4 py-2 rounded-md bg-card text-foreground font-medium">
-              Monthly
-            </button>
-            <button className="px-4 py-2 rounded-md text-muted-foreground hover:text-foreground">
-              Yearly (Save 50%)
-            </button>
-          </div>
+          {/* Billing Toggle - Remove */}
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              className={`futuristic-card p-8 relative ${
-                plan.popular ? 'border-primary/50 shadow-lg shadow-primary/10' : ''
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
-                    Most Popular
-                  </div>
-                </div>
-              )}
-
-              <div className="text-center mb-8">
-                <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
-                <p className="text-muted-foreground text-sm mb-6">{plan.subtitle}</p>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-muted-foreground">{plan.period}</span>
-                </div>
+        {/* Free Access Card */}
+        <div className="max-w-2xl mx-auto">
+          <div className="futuristic-card p-8 text-center border-primary/50 shadow-lg shadow-primary/10">
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold mb-4">Free Access</h3>
+              <p className="text-muted-foreground mb-6">
+                Everything you need to build and scale your network
+              </p>
+              <div className="mb-6">
+                <span className="text-5xl font-bold text-primary">$0</span>
+                <span className="text-muted-foreground">/forever</span>
               </div>
-
-              <div className="space-y-4 mb-8">
-                {plan.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <Button variant={plan.buttonVariant} className="w-full">
-                {plan.buttonText}
-              </Button>
             </div>
-          ))}
-        </div>
 
-        {/* Payment Methods */}
-        <div className="text-center">
-          <div className="inline-flex items-center gap-2 text-muted-foreground">
-            <CreditCard className="w-5 h-5" />
-            <span className="text-sm">Pay with Ease</span>
+            <div className="space-y-4 mb-8 text-left">
+              <div className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-sm">AI-powered networking and connections</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-sm">Unlimited startup creation and collaboration</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-sm">Business automation tools</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-sm">Analytics and insights dashboard</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-sm">Community support and resources</span>
+              </div>
+            </div>
+
+            <Button variant="hero" className="w-full">
+              Get Started - It's Free!
+            </Button>
           </div>
         </div>
       </div>

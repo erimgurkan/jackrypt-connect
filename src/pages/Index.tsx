@@ -9,13 +9,32 @@ import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Marquee text="JACKRYPT MAKES LIFE EASIER" />
-      <Hero />
-      <About />
-      <HowToUse />
-      <Pricing />
-      <Contact />
+    <div className="min-h-screen hero-bg text-foreground page-transition">
+      <Marquee text="Network - Connect - Scale" />
+      <div className="section-transition">
+        <Hero />
+      </div>
+      <div className="section-transition">
+        <About />
+      </div>
+      <div className="section-transition">
+        <HowToUse />
+      </div>
+      <div className="section-transition">
+        <Pricing />
+      </div>
+      <div className="section-transition">
+        <Contact />
+      </div>
+      
+      {/* Footer */}
+      <footer className="py-8 px-6 lg:px-12 border-t border-border/20">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-muted-foreground font-medium">
+            JACKRYPT 2025. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

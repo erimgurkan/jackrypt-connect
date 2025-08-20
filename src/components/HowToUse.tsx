@@ -5,59 +5,14 @@ const HowToUse = () => {
     <section className="py-20 px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side - Workflow Visualization */}
-          <div className="relative">
-            <div className="space-y-8">
-              {/* Central Hub */}
-              <div className="flex justify-center">
-                <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center">
-                  <Network className="w-10 h-10 text-primary" />
-                </div>
-              </div>
-
-              {/* Connected Apps */}
-              <div className="flex justify-center gap-8">
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 bg-neon-blue/20 rounded-full flex items-center justify-center mb-2">
-                    <Settings className="w-6 h-6 text-neon-blue" />
-                  </div>
-                  <div className="w-12 h-12 bg-card rounded-full flex items-center justify-center mb-2">
-                    <span className="text-xs">G</span>
-                  </div>
-                  <div className="w-12 h-12 bg-card rounded-full flex items-center justify-center mb-2">
-                    <span className="text-xs">W</span>
-                  </div>
-                  <div className="w-12 h-12 bg-card rounded-full flex items-center justify-center">
-                    <span className="text-xs">F</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Connecting Lines */}
-              <div className="absolute inset-0 pointer-events-none">
-                <svg className="w-full h-full" viewBox="0 0 400 300">
-                  <defs>
-                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="hsl(var(--neon-blue))" />
-                      <stop offset="100%" stopColor="hsl(var(--neon-purple))" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M200 150 L300 100 M200 150 L300 200 M200 150 L100 100"
-                    stroke="url(#lineGradient)"
-                    strokeWidth="2"
-                    fill="none"
-                    opacity="0.6"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-2">Network automation</h3>
-              <p className="text-muted-foreground mb-4">
-                Connect with your best & favorite entrepreneurs and services.
-              </p>
+          {/* Left Side - Collaboration Image */}
+          <div className="space-y-6">
+            <div className="futuristic-card p-6">
+              <img 
+                src="/lovable-uploads/70e34a94-0ae4-4968-aea8-a3b941f35ca3.png" 
+                alt="Collaborate Smarter, Achieve Faster - Jackrypt networking platform"
+                className="w-full h-auto rounded-lg"
+              />
             </div>
           </div>
 
