@@ -14,9 +14,6 @@ const Hero = () => {
           <Button variant="ghost" asChild className="text-foreground hover:text-primary">
             <Link to="/login">Sign In</Link>
           </Button>
-          <Button variant="hero" asChild className="gap-2">
-            <Link to="/register">Get Started <Sparkles className="w-4 h-4" /></Link>
-          </Button>
         </div>
       </nav>
 
@@ -42,10 +39,20 @@ const Hero = () => {
           Network, collaborate, and scale your relationships—all in one place.
         </p>
 
-        {/* CTA Button */}
-        <Button variant="hero" size="lg" asChild className="gap-2 text-lg px-8 py-6">
-          <Link to="/register">Start networking now <ArrowRight className="w-5 h-5" /></Link>
-        </Button>
+        {/* Get Started Button in Panel */}
+        <div className="futuristic-card p-6 bg-card/50 backdrop-blur-sm border border-border/20">
+          <Button 
+            variant="default" 
+            size="lg" 
+            asChild 
+            className="gap-2 text-lg px-8 py-6 bg-white text-black hover:bg-white/90 font-semibold"
+          >
+            <Link to="/register">
+              <Sparkles className="w-5 h-5" />
+              Get Started
+            </Link>
+          </Button>
+        </div>
 
         {/* Dashboard Preview */}
         <div className="mt-16 w-full max-w-5xl">

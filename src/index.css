@@ -172,20 +172,19 @@
     transform: translateY(-2px);
   }
 
-  /* Hero Background */
+  /* Hero background with animated white grid pattern */
   .hero-bg {
-    background: var(--gradient-hero);
+    background: hsl(var(--background));
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
     position: relative;
+    animation: grid-move 20s linear infinite;
   }
 
-  .hero-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(ellipse at center, transparent 0%, hsl(0 0% 0% / 0.3) 100%);
-    pointer-events: none;
+  @keyframes grid-move {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 50px 50px, 50px 50px; }
   }
 }

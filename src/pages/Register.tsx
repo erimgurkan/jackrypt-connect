@@ -4,34 +4,44 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "sonner";
 
 const Register = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    username: "",
-    email: "",
-    password: "",
-    confirmPassword: ""
-  });
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  
+  const { signUp } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords don't match");
+    if (password !== confirmPassword) {
+      toast.error("Passwords don't match");
       return;
     }
-    // Authentication requires Supabase integration
-    alert("To enable authentication, please connect your Lovable project to Supabase using the green Supabase button in the top-right corner of the interface.");
-    console.log("Registration attempt:", formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+    setLoading(true);
+    
+    try {
+      const { error } = await signUp(email, password, firstName, lastName, username);
+      
+      if (error) {
+        toast.error(error.message);
+      } else {
+        toast.success("Account created successfully! Please check your email to verify your account.");
+        navigate("/dashboard");
+      }
+    } catch (error: any) {
+      toast.error("An unexpected error occurred");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -57,8 +67,8 @@ const Register = () => {
                   id="firstName"
                   name="firstName"
                   placeholder="John"
-                  value={formData.firstName}
-                  onChange={handleChange}
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                   required
                   className="bg-input border-border"
                 />
@@ -69,8 +79,8 @@ const Register = () => {
                   id="lastName"
                   name="lastName"
                   placeholder="Doe"
-                  value={formData.lastName}
-                  onChange={handleChange}
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                   required
                   className="bg-input border-border"
                 />
@@ -83,8 +93,8 @@ const Register = () => {
                 id="username"
                 name="username"
                 placeholder="johndoe"
-                value={formData.username}
-                onChange={handleChange}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 required
                 className="bg-input border-border"
               />
@@ -97,8 +107,8 @@ const Register = () => {
                 name="email"
                 type="email"
                 placeholder="john@example.com"
-                value={formData.email}
-                onChange={handleChange}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
                 className="bg-input border-border"
               />
@@ -111,8 +121,8 @@ const Register = () => {
                 name="password"
                 type="password"
                 placeholder="Create a strong password"
-                value={formData.password}
-                onChange={handleChange}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 required
                 className="bg-input border-border"
               />
@@ -125,15 +135,15 @@ const Register = () => {
                 name="confirmPassword"
                 type="password"
                 placeholder="Confirm your password"
-                value={formData.confirmPassword}
-                onChange={handleChange}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 className="bg-input border-border"
               />
             </div>
             
-            <Button type="submit" variant="hero" size="lg" className="w-full">
-              Create Account
+            <Button type="submit" variant="hero" size="lg" className="w-full" disabled={loading}>
+              {loading ? "Creating Account..." : "Create Account"}
             </Button>
           </form>
           
