@@ -4,7 +4,6 @@ import Marquee from "@/components/Marquee";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import HowToUse from "@/components/HowToUse";
-import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 
 const Index = () => {
@@ -19,9 +18,6 @@ const Index = () => {
       </div>
       <div className="section-transition">
         <HowToUse />
-      </div>
-      <div className="section-transition">
-        <Pricing />
       </div>
       <div className="section-transition">
         <Contact />

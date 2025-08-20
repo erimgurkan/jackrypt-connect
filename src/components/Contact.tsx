@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-primary/5 to-secondary/5">
+    <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-secondary/20 to-neon-blue/15">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl lg:text-5xl font-bold mb-6">
           Step into the future of AI
