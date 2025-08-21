@@ -2,58 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Jackrypt Design System - Futuristic Black Theme with Neon Highlights */
+/* AutoAI Inspired Design System - Professional Dark Theme */
 
 @layer base {
   :root {
-    /* Core Colors - Black Theme */
-    --background: 0 0% 3%; /* Deep black */
+    /* Core Colors - Professional Dark Theme */
+    --background: 220 27% 8%; /* Deep navy blue */
     --foreground: 0 0% 98%; /* Pure white text */
 
-    --card: 0 0% 8%; /* Dark card background */
+    --card: 220 27% 12%; /* Dark card background */
     --card-foreground: 0 0% 95%; /* Light card text */
 
-    --popover: 0 0% 5%; /* Popover background */
+    --popover: 220 27% 10%; /* Popover background */
     --popover-foreground: 0 0% 98%; /* Popover text */
 
-    /* Neon Accent Colors */
-    --primary: 265 100% 65%; /* Purple neon */
-    --primary-foreground: 0 0% 100%; /* White on purple */
+    /* Professional Accent Colors */
+    --primary: 250 100% 65%; /* Blue accent */
+    --primary-foreground: 0 0% 100%; /* White on primary */
 
-    --secondary: 200 100% 60%; /* Blue neon */  
-    --secondary-foreground: 0 0% 100%; /* White on blue */
+    --secondary: 220 27% 18%; /* Subtle blue-gray */  
+    --secondary-foreground: 0 0% 100%; /* White on secondary */
 
-    --muted: 0 0% 15%; /* Muted dark */
-    --muted-foreground: 0 0% 60%; /* Muted text */
+    --muted: 220 27% 15%; /* Muted dark */
+    --muted-foreground: 0 0% 65%; /* Muted text */
 
-    --accent: 280 100% 70%; /* Bright purple accent */
+    --accent: 280 100% 70%; /* Purple accent */
     --accent-foreground: 0 0% 100%; /* White on accent */
 
     --destructive: 0 85% 60%; /* Red for errors */
     --destructive-foreground: 0 0% 100%; /* White on red */
 
-    --border: 0 0% 20%; /* Dark borders */
-    --input: 0 0% 12%; /* Input backgrounds */
-    --ring: 265 100% 65%; /* Focus ring purple */
+    --border: 220 27% 20%; /* Dark borders */
+    --input: 220 27% 12%; /* Input backgrounds */
+    --ring: 250 100% 65%; /* Focus ring blue */
 
-    /* Neon Glow Colors */
-    --neon-blue: 200 100% 60%; /* Blue neon */
-    --neon-purple: 265 100% 65%; /* Purple neon */
-    --neon-cyan: 180 100% 60%; /* Cyan neon */
+    /* Professional Colors */
+    --professional-blue: 250 100% 65%; /* Main blue */
+    --professional-purple: 280 100% 70%; /* Purple accent */
+    --professional-dark: 220 27% 8%; /* Background dark */
 
-    /* Gradients */
-    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-purple)));
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 5%), hsl(0 0% 10%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 2%), hsl(265 50% 8%));
+    /* Gradients - AutoAI Style */
+    --gradient-hero: linear-gradient(135deg, hsl(220 27% 8%), hsl(250 50% 15%), hsl(280 50% 20%));
+    --gradient-card: linear-gradient(135deg, hsl(220 27% 12%), hsl(220 27% 15%));
+    --gradient-professional: linear-gradient(135deg, hsl(250 100% 65%), hsl(280 100% 70%));
 
-    /* Shadows & Glows */
-    --shadow-neon: 0 0 30px hsl(var(--neon-purple) / 0.3);
-    --shadow-blue-glow: 0 0 40px hsl(var(--neon-blue) / 0.2);
-    --shadow-card: 0 10px 30px hsl(0 0% 0% / 0.3);
+    /* Shadows & Glows - Professional */
+    --shadow-professional: 0 4px 20px hsl(220 27% 5% / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 27% 5% / 0.2);
+    --shadow-blue-glow: 0 0 30px hsl(var(--professional-blue) / 0.15);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-glow: all 0.5s ease-in-out;
+    --transition-professional: all 0.4s ease-out;
 
     --radius: 0.75rem;
 
@@ -123,7 +123,7 @@
   }
 }
 
-/* Jackrypt Custom Animations & Effects */
+/* AutoAI Inspired Components & Effects */
 @layer components {
   /* Marquee Animation */
   .marquee {
@@ -136,52 +136,44 @@
     100% { transform: translateX(-100%); }
   }
 
-  /* Neon Glow Effects */
-  .neon-glow {
-    box-shadow: 
-      0 0 10px hsl(var(--neon-purple) / 0.5),
-      0 0 20px hsl(var(--neon-purple) / 0.3),
-      0 0 40px hsl(var(--neon-purple) / 0.1);
+  /* Professional Glow Effects */
+  .professional-glow {
+    box-shadow: var(--shadow-blue-glow);
   }
 
-  .neon-line {
-    background: var(--gradient-neon);
-    animation: glow-pulse 2s ease-in-out infinite alternate;
-  }
-
-  @keyframes glow-pulse {
-    0% { 
-      box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.4);
-    }
-    100% { 
-      box-shadow: 0 0 30px hsl(var(--neon-purple) / 0.6);
-    }
-  }
-
-  /* Futuristic Card Hover */
-  .futuristic-card {
+  .professional-card {
     @apply bg-card border border-border rounded-xl transition-all duration-300;
+    background: var(--gradient-card);
     box-shadow: var(--shadow-card);
   }
 
-  .futuristic-card:hover {
-    @apply border-primary/50;
+  .professional-card:hover {
+    @apply border-primary/30;
     box-shadow: 
       var(--shadow-card),
-      0 0 20px hsl(var(--neon-purple) / 0.2);
+      var(--shadow-blue-glow);
     transform: translateY(-2px);
   }
 
-  /* Hero background with both horizontal and vertical grid pattern extending to full page */
+  /* Hero background - AutoAI inspired gradient */
   .hero-bg {
-    background: hsl(var(--background));
-    background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    background-position: 0 0;
+    background: var(--gradient-hero);
     position: relative;
     min-height: 100vh;
+  }
+
+  /* Professional button styles */
+  .professional-button {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    box-shadow: 0 4px 16px hsl(var(--primary) / 0.3);
+  }
+
+  .professional-button:hover {
+    background: hsl(var(--primary) / 0.9);
+    box-shadow: 0 6px 24px hsl(var(--primary) / 0.4);
+    transform: translateY(-1px);
   }
 
   /* Page transitions and smooth effects */
