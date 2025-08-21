@@ -11,11 +11,8 @@ const Hero = () => {
           JACKRYPT
         </div>
         <div className="flex gap-4">
-          <Button variant="ghost" className="text-foreground hover:text-primary">
-            Sign In
-          </Button>
           <Button className="professional-button">
-            Get Started
+            Join Network
           </Button>
         </div>
       </nav>
@@ -25,24 +22,24 @@ const Hero = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
           <TrendingUp className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium text-primary">Manage workflows smarter</span>
+          <span className="text-sm font-medium text-primary">Connect with entrepreneurs</span>
           <ArrowRight className="w-4 h-4 text-primary" />
         </div>
 
         {/* Main Heading - AutoAI Style */}
         <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-          <span className="text-foreground">AI-Powered Automation</span>
+          <span className="text-foreground">Professional Networking</span>
           <br />
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            With Precision
+            Made Simple
           </span>
         </h1>
 
         {/* Description */}
         <p className="text-xl text-muted-foreground mb-12 max-w-2xl leading-relaxed">
-          Effortlessly streamline your business operations with JACKRYPT.
+          Connect with like-minded entrepreneurs and build your dream team with JACKRYPT.
           <br />
-          Automate, optimize, and scale your workflows—all in one place.
+          Find collaborators, join projects, and grow your professional network.
         </p>
 
         {/* CTA Button */}
@@ -52,7 +49,7 @@ const Hero = () => {
           className="professional-button text-lg px-8 py-4 mb-16"
         >
           <Link to="/register">
-            Start automating now
+            Start networking now
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </Button>

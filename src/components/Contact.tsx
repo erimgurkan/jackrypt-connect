@@ -29,14 +29,14 @@ const Contact = () => {
     <section className="py-20 px-6 lg:px-12 contact-section-bg">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-          Step into the future of AI
+          Step into the future of professional
           <br />
           networking
         </h2>
         <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Experience the cutting-edge solution that transforms how
-          you handle your network. Elevate your business presence
-          with our next-gen platform.
+          Experience the innovative platform that transforms how
+          you build professional relationships. Elevate your career and business
+          with meaningful connections.
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -76,7 +76,7 @@ const Contact = () => {
                 <Textarea
                   id="message"
                   name="message"
-                  placeholder="Tell us about your networking needs..."
+                  placeholder="Tell us about your professional goals and networking needs..."
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -96,7 +96,7 @@ const Contact = () => {
             <div className="futuristic-card p-8 bg-gradient-to-br from-primary/10 to-secondary/10">
               <h3 className="text-xl font-semibold mb-4">Ready to Start?</h3>
               <p className="text-muted-foreground mb-6">
-                Join thousands of entrepreneurs who are already scaling their networks with Jackrypt.
+                Join thousands of professionals who are already building meaningful connections with Jackrypt.
               </p>
               <Button variant="hero" size="lg" className="gap-2">
                 Get started <ArrowRight className="w-5 h-5" />
@@ -106,9 +106,9 @@ const Contact = () => {
             <div className="space-y-4 text-left">
               <h4 className="font-semibold">Why Choose Jackrypt?</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• AI-powered networking automation</li>
-                <li>• Connect with verified entrepreneurs</li>
-                <li>• Advanced analytics and insights</li>
+                <li>• Smart matching with compatible professionals</li>
+                <li>• Connect with verified entrepreneurs and experts</li>
+                <li>• Project collaboration tools</li>
                 <li>• Secure and private platform</li>
                 <li>• 24/7 dedicated support</li>
               </ul>

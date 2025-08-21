@@ -35,13 +35,13 @@ const HowToUse = () => {
           </div>
 
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            AI Networking in 3 Simple
+            Professional Networking in 3 Simple
             <br />
             Steps
           </h2>
           <p className="text-xl text-muted-foreground mb-16 max-w-2xl mx-auto">
-            Follow these steps to streamline connections, boost collaboration, and
-            scale with Jackrypt.
+            Follow these steps to build meaningful connections, find collaborators, and
+            grow your professional network with Jackrypt.
           </p>
 
           {/* Steps */}
@@ -55,10 +55,10 @@ const HowToUse = () => {
                   1
                 </div>
               </div>
-              <h3 className="text-xl font-semibold">Identify & Integrate</h3>
+              <h3 className="text-xl font-semibold">Create & Connect</h3>
               <p className="text-muted-foreground">
-                Pinpoint key connections and seamlessly
-                integrate AI-powered networking.
+                Create your professional profile and connect with
+                entrepreneurs who share your vision and goals.
               </p>
             </div>
 
@@ -71,10 +71,10 @@ const HowToUse = () => {
                   2
                 </div>
               </div>
-              <h3 className="text-xl font-semibold">Network & Optimize</h3>
+              <h3 className="text-xl font-semibold">Discover & Match</h3>
               <p className="text-muted-foreground">
-                Leverage AI to handle connections efficiently,
-                reducing manual effort and errors.
+                Discover projects that match your skills and interests,
+                or find the perfect team members for your venture.
               </p>
             </div>
 
@@ -87,10 +87,10 @@ const HowToUse = () => {
                   3
                 </div>
               </div>
-              <h3 className="text-xl font-semibold">Monitor & Scale</h3>
+              <h3 className="text-xl font-semibold">Collaborate & Grow</h3>
               <p className="text-muted-foreground">
-                Continuously improve networks with
-                insights, ensuring growth and adaptability.
+                Start collaborating on exciting projects and
+                grow your network through meaningful partnerships.
               </p>
             </div>
           </div>

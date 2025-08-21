@@ -70,8 +70,8 @@ const Pricing = () => {
             Completely Free
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Access all of Jackrypt's powerful AI networking features at no cost.
-            Connect, collaborate, and scale your business effortlessly.
+            Access all of Jackrypt's powerful networking features at no cost.
+            Connect, collaborate, and grow your professional network effortlessly.
           </p>
 
           {/* Billing Toggle - Remove */}
@@ -83,7 +83,7 @@ const Pricing = () => {
             <div className="mb-8">
               <h3 className="text-2xl font-bold mb-4">Free Access</h3>
               <p className="text-muted-foreground mb-6">
-                Everything you need to build and scale your network
+                Everything you need to build and grow your professional network
               </p>
               <div className="mb-6">
                 <span className="text-5xl font-bold text-primary">$0</span>
@@ -94,19 +94,19 @@ const Pricing = () => {
             <div className="space-y-4 mb-8 text-left">
               <div className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm">AI-powered networking and connections</span>
+                <span className="text-sm">Smart networking and professional connections</span>
               </div>
               <div className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm">Unlimited startup creation and collaboration</span>
+                <span className="text-sm">Unlimited project creation and collaboration</span>
               </div>
               <div className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm">Business automation tools</span>
+                <span className="text-sm">Team building and skill matching tools</span>
               </div>
               <div className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm">Analytics and insights dashboard</span>
+                <span className="text-sm">Network analytics and connection insights</span>
               </div>
               <div className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
