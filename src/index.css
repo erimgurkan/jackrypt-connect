@@ -6,14 +6,14 @@
 
 @layer base {
   :root {
-    /* Core Colors - Professional Dark Theme */
-    --background: 220 27% 8%; /* Deep navy blue */
+    /* Core Colors - Black Theme with White Grid */
+    --background: 0 0% 0%; /* Pure black */
     --foreground: 0 0% 98%; /* Pure white text */
 
-    --card: 220 27% 12%; /* Dark card background */
+    --card: 0 0% 8%; /* Dark card background */
     --card-foreground: 0 0% 95%; /* Light card text */
 
-    --popover: 220 27% 10%; /* Popover background */
+    --popover: 0 0% 5%; /* Popover background */
     --popover-foreground: 0 0% 98%; /* Popover text */
 
     /* Professional Accent Colors */
@@ -155,9 +155,14 @@
     transform: translateY(-2px);
   }
 
-  /* Hero background - AutoAI inspired gradient */
+  /* Hero background - Black with white grid for all pages */
   .hero-bg {
-    background: var(--gradient-hero);
+    background: hsl(var(--background));
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0;
     position: relative;
     min-height: 100vh;
   }
